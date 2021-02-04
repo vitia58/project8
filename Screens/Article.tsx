@@ -22,8 +22,8 @@ export function Article({route, navigation}: {route: any; navigation: any}) {
   navigation.setOptions({title: title});
   const onRefresh = React.useCallback(async () => {
     setRefreshing(true);
-    getData('article?id=' + article, setArticle, setLoadingArticle);
-    getData('comments?id=' + article, setComment, setLoadingComments);
+    getData('article' + article, setArticle, setLoadingArticle);
+    getData('comments' + article, setComment, setLoadingComments);
     setRefreshing(false);
   }, [article]);
   if (reloadRandom !== articleRandom) {

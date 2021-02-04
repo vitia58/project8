@@ -42,7 +42,8 @@ export function Articles({navigation}: {navigation: any}) {
             renderItem={({
               item,
             }: {
-              item: {id: string; title: string; text: string};
+              item: {id: string; title: string; text: string
+              };
             }) => (
               <Card
                 onTouchStart={() => setLastClick(Date.now())}
